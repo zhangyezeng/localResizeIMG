@@ -344,8 +344,9 @@
 
     function getImageData (img, callback) {
         function handleBinaryFile (binFile) {
-            var data     = findEXIFinJPEG(binFile);
-            var iptcdata = findIPTCinJPEG(binFile);
+            // var data     = findEXIFinJPEG(binFile);
+            // var iptcdata = findIPTCinJPEG(binFile);
+            var data,iptcdata;
             img.exifdata = data || {};
             img.iptcdata = iptcdata || {};
             if (callback) {
